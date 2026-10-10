@@ -1,0 +1,254 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: ECHO-FLOW synthetic emergency decision demonstrator
+
+Parameters:
+  AllowedOrigin:
+    Type: String
+    Description: Exact frontend HTTPS origin
+  BedrockModelId:
+    Type: String
+    Default: ""
+    Description: Enabled Bedrock model or inference profile ID
+  BedrockResourceArn:
+    Type: String
+    Default: "*"
+    Description: ARN authorized for InvokeModel; narrow this to your chosen model/profile
+  TavilyApiKey:
+    Type: String
+    NoEcho: true
+    Default: ""
+    Description: Optional. For production prefer Secrets Manager; empty leaves Tavily NOT_CONNECTED
+  AgentProvider:
+    Type: String
+    Default: local_rules
+    AllowedValues: [local_rules, bedrock]
+
+Conditions:
+  UseBedrock: !Equals [!Ref AgentProvider, bedrock]
+
+Resources:
+  Snapshots:
+    Type: AWS::S3::Bucket
+    DeletionPolicy: Retain
+    UpdateReplacePolicy: Retain
+    Properties:
+      VersioningConfiguration: { Status: Enabled }
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault: { SSEAlgorithm: AES256 }
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+
+  SnapshotPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref Snapshots
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Sid: RequireTLS
+            Effect: Deny
+            Principal: "*"
+            Action: s3:*
+            Resource:
+              - !GetAtt Snapshots.Arn
+              - !Sub "${Snapshots.Arn}/*"
+            Condition:
+              Bool: { aws:SecureTransport: "false" }
+
+  StateTable:
+    Type: AWS::DynamoDB::Table
+    DeletionPolicy: Retain
+    UpdateReplacePolicy: Retain
+    Properties:
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - { AttributeName: id, AttributeType: S }
+      KeySchema:
+        - { AttributeName: id, KeyType: HASH }
+      SSESpecification: { SSEEnabled: true }
+      PointInTimeRecoverySpecification: { PointInTimeRecoveryEnabled: true }
+
+  AuditTable:
+    Type: AWS::DynamoDB::Table
+    DeletionPolicy: Retain
+    UpdateReplacePolicy: Retain
+    Properties:
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - { AttributeName: scenario_id, AttributeType: S }
+        - { AttributeName: seq, AttributeType: N }
+      KeySchema:
+        - { AttributeName: scenario_id, KeyType: HASH }
+        - { AttributeName: seq, KeyType: RANGE }
+      SSESpecification: { SSEEnabled: true }
+      PointInTimeRecoverySpecification: { PointInTimeRecoveryEnabled: true }
+
+  UserPool:
+    Type: AWS::Cognito::UserPool
+    Properties:
+      AdminCreateUserConfig: { AllowAdminCreateUserOnly: true }
+      UsernameAttributes: [email]
+      AutoVerifiedAttributes: [email]
+      Policies:
+        PasswordPolicy:
+          MinimumLength: 14
+          RequireLowercase: true
+          RequireUppercase: true
+          RequireNumbers: true
+          RequireSymbols: true
+
+  UserPoolClient:
+    Type: AWS::Cognito::UserPoolClient
+    Properties:
+      UserPoolId: !Ref UserPool
+      GenerateSecret: false
+      ExplicitAuthFlows: [ALLOW_USER_SRP_AUTH, ALLOW_REFRESH_TOKEN_AUTH]
+      PreventUserExistenceErrors: ENABLED
+
+  HttpApi:
+    Type: AWS::Serverless::HttpApi
+    Properties:
+      CorsConfiguration:
+        AllowOrigins: [!Ref AllowedOrigin]
+        AllowHeaders: [Content-Type, Authorization]
+        AllowMethods: [GET, POST]
+      DefaultRouteSettings:
+        ThrottlingBurstLimit: 20
+        ThrottlingRateLimit: 10
+      Auth:
+        DefaultAuthorizer: Commander
+        Authorizers:
+          Commander:
+            IdentitySource: "$request.header.Authorization"
+            JwtConfiguration:
+              issuer: !Sub "https://cognito-idp.${AWS::Region}.amazonaws.com/${UserPool}"
+              audience: [!Ref UserPoolClient]
+
+  ApiFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: ../
+      Handler: backend.handler.handler
+      Runtime: python3.12
+      MemorySize: 1024
+      Timeout: 180
+      Architectures: [arm64]
+      Environment:
+        Variables:
+          ECHO_RUNTIME: aws
+          ECHO_STORE: dynamodb
+          ECHO_TABLE: !Ref StateTable
+          ECHO_BUCKET: !Ref Snapshots
+          ECHO_AUDIT_TABLE: !Ref AuditTable
+          TAVILY_API_KEY: !Ref TavilyApiKey
+          ECHO_AGENT_PROVIDER: !Ref AgentProvider
+          ECHO_BEDROCK_MODEL_ID: !Ref BedrockModelId
+          ECHO_ALLOWED_ORIGINS: !Ref AllowedOrigin
+          ECHO_STATE_MACHINE_ARN: !Sub "arn:${AWS::Partition}:states:${AWS::Region}:${AWS::AccountId}:stateMachine:echo-flow-${AWS::StackName}"
+      Policies:
+        - DynamoDBCrudPolicy: { TableName: !Ref StateTable }
+        - S3CrudPolicy: { BucketName: !Ref Snapshots }
+        - Statement:
+            # Append-only audit: deliberately NO UpdateItem / DeleteItem.
+            - Effect: Allow
+              Action: [dynamodb:PutItem, dynamodb:GetItem, dynamodb:Query, dynamodb:DescribeTable]
+              Resource: !GetAtt AuditTable.Arn
+        - Statement:
+            - Effect: Allow
+              Action: [states:StartExecution]
+              Resource: !Sub "arn:${AWS::Partition}:states:${AWS::Region}:${AWS::AccountId}:stateMachine:echo-flow-${AWS::StackName}"
+            - Effect: Allow
+              Action: [states:DescribeExecution]
+              Resource: !Sub "arn:${AWS::Partition}:states:${AWS::Region}:${AWS::AccountId}:execution:echo-flow-${AWS::StackName}:*"
+        - !If
+          - UseBedrock
+          - Statement:
+              - Effect: Allow
+                Action: [bedrock:InvokeModel]
+                Resource: !Ref BedrockResourceArn
+          - !Ref AWS::NoValue
+      Events:
+        PublicHealth:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref HttpApi
+            Path: /api/health
+            Method: GET
+            Auth: { Authorizer: NONE }
+        RootProxy:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref HttpApi
+            Path: /{proxy+}
+            Method: ANY
+
+  ApiLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub "/aws/lambda/${ApiFunction}"
+      RetentionInDays: 14
+
+  ApiErrorAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmDescription: ECHO-FLOW Lambda errors
+      Namespace: AWS/Lambda
+      MetricName: Errors
+      Dimensions: [{ Name: FunctionName, Value: !Ref ApiFunction }]
+      Statistic: Sum
+      Period: 300
+      EvaluationPeriods: 1
+      Threshold: 1
+      ComparisonOperator: GreaterThanOrEqualToThreshold
+      TreatMissingData: notBreaching
+
+  Workflow:
+    Type: AWS::Serverless::StateMachine
+    Properties:
+      Name: !Sub "echo-flow-${AWS::StackName}"
+      Type: STANDARD
+      Definition:
+        StartAt: AnalyzeDecision
+        States:
+          AnalyzeDecision:
+            Type: Task
+            Resource: arn:aws:states:::lambda:invoke
+            Parameters:
+              FunctionName: !GetAtt ApiFunction.Arn
+              Payload:
+                command: analyze
+                input.$: "$"
+                execution_id.$: "$$.Execution.Id"
+            OutputPath: "$.Payload"
+            Next: AuditCompletion
+          AuditCompletion:
+            Type: Task
+            Resource: arn:aws:states:::lambda:invoke
+            Parameters:
+              FunctionName: !GetAtt ApiFunction.Arn
+              Payload:
+                command: audit
+                input.$: "$"
+            OutputPath: "$.Payload"
+            End: true
+      Policies:
+        - LambdaInvokePolicy: { FunctionName: !Ref ApiFunction }
+
+Outputs:
+  ApiUrl:
+    Value: !Sub "https://${HttpApi}.execute-api.${AWS::Region}.amazonaws.com"
+  UserPoolId:
+    Value: !Ref UserPool
+  UserPoolClientId:
+    Value: !Ref UserPoolClient
+  StateMachineArn:
+    Value: !Ref Workflow
+  AuditTableName:
+    Value: !Ref AuditTable
+  SnapshotBucket:
+    Value: !Ref Snapshots

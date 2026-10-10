@@ -1,0 +1,30 @@
+422 ERROR: {\
+ERRORS: [{'type': 'json_invalid', 'loc': ('body', 1), 'msg': 'JSON decode error', 'input': {}, 'ctx': {'error': 'Expecting property name enclosed in double quotes'}}]
+422 ERROR: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.174681987851855,"lon":74.603008781787},"travelMode":"rider","maxDetourPct":40,"sun":{"altitudeDeg":-4436.866657224127,"azimuthDeg":283.4852892215815}}
+ERRORS: [{'type': 'greater_than_equal', 'loc': ('body', 'sun', 'altitudeDeg'), 'msg': 'Input should be greater than or equal to -90', 'input': -4436.866657224127, 'ctx': {'ge': -90.0}}]
+422 ERROR: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.178675911316006,"lon":74.60931762386664},"travelMode":"rider","maxDetourPct":40,"sun":{"altitudeDeg":-4436.745103937606,"azimuthDeg":301.7904067709637}}
+ERRORS: [{'type': 'greater_than_equal', 'loc': ('body', 'sun', 'altitudeDeg'), 'msg': 'Input should be greater than or equal to -90', 'input': -4436.745103937606, 'ctx': {'ge': -90.0}}]
+422 ERROR: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.151990307700316,"lon":74.5779619646101},"travelMode":"rider","maxDetourPct":40,"sun":{"altitudeDeg":-4429.204940318198,"azimuthDeg":332.8643398113469}}
+ERRORS: [{'type': 'greater_than_equal', 'loc': ('body', 'sun', 'altitudeDeg'), 'msg': 'Input should be greater than or equal to -90', 'input': -4429.204940318198, 'ctx': {'ge': -90.0}}]
+422 ERROR: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.151990307700316,"lon":74.5779619646101},"travelMode":"rider","maxDetourPct":40,"sun":{"altitudeDeg":-4428.950841699592,"azimuthDeg":340.8477782963423}}
+ERRORS: [{'type': 'greater_than_equal', 'loc': ('body', 'sun', 'altitudeDeg'), 'msg': 'Input should be greater than or equal to -90', 'input': -4428.950841699592, 'ctx': {'ge': -90.0}}]
+422 ERROR: {"origin":-1}
+ERRORS: [{'type': 'greater_than_equal', 'loc': ('body', 'origin'), 'msg': 'Input should be greater than or equal to 0', 'input': -1, 'ctx': {'ge': 0}}]
+422 ERROR: {"origin":2,"destination":2}
+ERRORS: [{'type': 'value_error', 'loc': ('body',), 'msg': 'Value error, origin and destination must differ', 'input': {'origin': 2, 'destination': 2}, 'ctx': {'error': ValueError('origin and destination must differ')}}]
+422 ERROR: {"origin":-1}
+ERRORS: [{'type': 'greater_than_equal', 'loc': ('body', 'origin'), 'msg': 'Input should be greater than or equal to 0', 'input': -1, 'ctx': {'ge': 0}}]
+422 ERROR: {"origin":2,"destination":2}
+ERRORS: [{'type': 'value_error', 'loc': ('body',), 'msg': 'Value error, origin and destination must differ', 'input': {'origin': 2, 'destination': 2}, 'ctx': {'error': ValueError('origin and destination must differ')}}]
+422 ERROR: {"idempotency_key":"test_req_invalid","latitude":100,"longitude":73.8}
+ERRORS: [{'type': 'less_than_equal', 'loc': ('body', 'latitude'), 'msg': 'Input should be less than or equal to 90', 'input': 100, 'ctx': {'le': 90.0}}]
+422 ERROR: {"idempotency_key":"test_req_invalid","latitude":100,"longitude":73.8}
+ERRORS: [{'type': 'less_than_equal', 'loc': ('body', 'latitude'), 'msg': 'Input should be less than or equal to 90', 'input': 100, 'ctx': {'le': 90.0}}]
+422 ERROR: {"idempotency_key":"test_req_invalid","latitude":100,"longitude":73.8}
+ERRORS: [{'type': 'less_than_equal', 'loc': ('body', 'latitude'), 'msg': 'Input should be less than or equal to 90', 'input': 100, 'ctx': {'le': 90.0}}]
+422 ERROR: {"idempotency_key":"test_req_invalid","latitude":100,"longitude":73.8}
+ERRORS: [{'type': 'less_than_equal', 'loc': ('body', 'latitude'), 'msg': 'Input should be less than or equal to 90', 'input': 100, 'ctx': {'le': 90.0}}]
+422 ERROR: {"idempotency_key":"test_req_invalid","latitude":100,"longitude":73.8}
+ERRORS: [{'type': 'less_than_equal', 'loc': ('body', 'latitude'), 'msg': 'Input should be less than or equal to 90', 'input': 100, 'ctx': {'le': 90.0}}]
+422 ERROR: {"idempotency_key":"test_req_invalid","latitude":100,"longitude":73.8}
+ERRORS: [{'type': 'less_than_equal', 'loc': ('body', 'latitude'), 'msg': 'Input should be less than or equal to 90', 'input': 100, 'ctx': {'le': 90.0}}]

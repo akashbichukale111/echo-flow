@@ -1,0 +1,10 @@
+node_modules/
+.env
+.venv/
+__pycache__/
+.aws-sam/
+dist/
+build/
+.pytest_cache/
+*.db
+*.sqlite3

@@ -1,0 +1,154 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: RAHAT AI private demo backend, persistence, and agent orchestration
+
+Parameters:
+  BedrockModelId:
+    Type: String
+    Default: ""
+  BedrockModelArn:
+    Type: String
+    Default: ""
+  EnableBedrock:
+    Type: String
+    Default: "false"
+    AllowedValues: ["true", "false"]
+
+  ProviderMode:
+    Type: String
+    Default: demo
+    AllowedValues: [demo, real]
+  # Secrets are passed at deploy time and never committed. Prefer Secrets Manager for production.
+  WeatherApiKey:
+    Type: String
+    NoEcho: true
+    Default: ""
+  LocationApiKey:
+    Type: String
+    NoEcho: true
+    Default: ""
+
+Conditions:
+  BedrockConfigured: !And
+    - !Equals [!Ref EnableBedrock, "true"]
+    - !Not [!Equals [!Ref BedrockModelArn, ""]]
+
+Globals:
+  Function:
+    Runtime: python3.12
+    Timeout: 30
+    MemorySize: 1024
+    Architectures: [x86_64]
+    Environment:
+      Variables:
+        PROVIDER_MODE: !Ref ProviderMode
+        ENABLE_DEMO_FALLBACK: "true"
+        WEATHERAPI_KEY: !Ref WeatherApiKey
+        AWS_LOCATION_API_KEY: !Ref LocationApiKey
+        STORE_MODE: dynamodb
+        DYNAMODB_TABLE: !Ref Records
+        BEDROCK_ENABLED: !Ref EnableBedrock
+        BEDROCK_MODEL_ID: !Ref BedrockModelId
+
+Resources:
+  Api:
+    Type: AWS::Serverless::HttpApi
+    Properties:
+      Auth:
+        DefaultAuthorizer: AWS_IAM
+
+Records:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: kind
+          AttributeType: S
+        - AttributeName: id
+          AttributeType: S
+      KeySchema:
+        - AttributeName: kind
+          KeyType: HASH
+        - AttributeName: id
+          KeyType: RANGE
+      SSESpecification:
+        SSEEnabled: true
+      PointInTimeRecoverySpecification:
+        PointInTimeRecoveryEnabled: true
+
+EvidenceBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+      VersioningConfiguration:
+        Status: Enabled
+
+ApiFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: ../../services/api/
+      Handler: main.handler
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref Records
+        - !If
+          - BedrockConfigured
+          - Statement:
+              - Effect: Allow
+                Action: bedrock:InvokeModel
+                Resource: !Ref BedrockModelArn
+          - !Ref AWS::NoValue
+      Events:
+        Proxy:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref Api
+            Path: /{proxy+}
+            Method: ANY
+
+AgentFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: ../../services/api/
+      Handler: main.agent_handler
+
+ApiLogs:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub /aws/lambda/${ApiFunction}
+      RetentionInDays: 14
+
+AgentLogs:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub /aws/lambda/${AgentFunction}
+      RetentionInDays: 14
+
+Orchestrator:
+    Type: AWS::Serverless::StateMachine
+    Properties:
+      Type: STANDARD
+      DefinitionUri: state-machine.json
+      DefinitionSubstitutions:
+        AgentArn: !GetAtt AgentFunction.Arn
+      Policies:
+        - LambdaInvokePolicy:
+            FunctionName: !Ref AgentFunction
+
+Outputs:
+  ApiUrl:
+    Value: !Sub https://${Api}.execute-api.${AWS::Region}.amazonaws.com
+  StateMachineArn:
+    Value: !Ref Orchestrator
+  EvidenceBucketName:
+    Value: !Ref EvidenceBucket
+  TableName:
+    Value: !Ref Records

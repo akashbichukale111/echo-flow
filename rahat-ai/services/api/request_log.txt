@@ -1,0 +1,134 @@
+[1791484040.9678452] Received analyze: {"origin":{"lat":18.152,"lon":74.576},"destination":{"lat":18.162,"lon":74.586},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":null,"azimuthDeg":null},"scenario":null}
+[1791484081.3778656] Analyze success: True, demo=False
+[1791484958.5420916] Received analyze: {"origin":{"lat":18.152,"lon":74.576},"destination":{"lat":18.152,"lon":74.576},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":null,"azimuthDeg":null},"scenario":null}
+[1791484999.04981] Analyze success: True, demo=False
+[1791486314.9136314] Received analyze: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.182461721753754,"lon":74.59734336109133},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":-4401.163327845463,"azimuthDeg":169.42366635933968},"scenario":null}
+[1791486361.8123612] Analyze success: True, demo=False
+[1791486450.833014] Received analyze: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.153607559796086,"lon":74.57803493734889},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":-4390.713910598597,"azimuthDeg":307.3302068414273},"scenario":null}
+[1791486474.5247943] Analyze success: True, demo=False
+[1791486510.375387] Received analyze: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.157203712647515,"lon":74.59476254418934},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":-4385.757533542329,"azimuthDeg":6.515812387550568},"scenario":null}
+[1791486534.1636739] Analyze success: True, demo=False
+[1791486764.1784585] Received analyze: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.180449434045272,"lon":74.60882619794887},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":-4362.173196026004,"azimuthDeg":249.86965185786084},"scenario":null}
+[1791486782.9202647] Analyze success: True, demo=False
+[1791496286.8391554] Received analyze: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.150478624895143,"lon":74.57632885317861},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":-2491.049511933673,"azimuthDeg":129.34702547854795},"scenario":null}
+[1791496311.5227113] Analyze success: True, demo=False
+[1791498576.6833313] Received analyze: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.160041338033707,"lon":74.58676878754656},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":-1975.9143426414803,"azimuthDeg":354.94768440234384},"scenario":null}
+[1791498614.8651025] Analyze success: True, demo=False
+[1791498674.170917] Received analyze: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.180231146029385,"lon":74.60871138171973},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":-1953.8948728967257,"azimuthDeg":3.6277539089496713},"scenario":null}
+[1791498711.1627433] Analyze error: 'estimatedShade'
+[1791498727.8971334] Received analyze: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.177965753143468,"lon":74.60889339762957},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":-1941.7583655904227,"azimuthDeg":8.385479512454367},"scenario":null}
+[1791498750.9847057] Analyze success: True, demo=False
+[1791498798.419803] Received analyze: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.176726429427404,"lon":74.60448817132897},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":-1925.8248978300032,"azimuthDeg":14.603703387299902},"scenario":null}
+[1791498806.1859932] Analyze error: 'estimatedShade'
+[1791498811.4953513] Received analyze: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.176726429427404,"lon":74.60448817132897},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":-1922.9397236405757,"azimuthDeg":15.726324278412903},"scenario":null}
+[1791498814.225248] Analyze error: 'estimatedShade'
+[1791498819.1428242] Received analyze: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.175829733119684,"lon":74.60454972286522},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":-1921.2113784006406,"azimuthDeg":16.398335095637776},"scenario":null}
+[1791498839.5700696] Analyze error: 'estimatedShade'
+[1791510205.0211248] Received analyze: {"origin":{"lat":18.1511158859537,"lon":74.57635887611414},"destination":{"lat":18.179206777203007,"lon":74.60778001587647},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":626.0377885176009,"azimuthDeg":166.676873580951},"scenario":null}
+[1791510231.9512804] Analyze success: True, demo=False
+[1791510311.8998964] Received analyze: {"origin":{"lat":18.1511158859537,"lon":74.57635887611414},"destination":{"lat":18.1521891,"lon":74.5771735},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":649.7132679663486,"azimuthDeg":175.50458955598788},"scenario":null}
+[1791510321.055272] Analyze success: True, demo=False
+[1791510502.9188457] Received analyze: {"origin":{"lat":18.1511158859537,"lon":74.57635887611414},"destination":{"lat":18.160189913042927,"lon":74.58695065009042},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":692.09831387481,"azimuthDeg":191.4258113139922},"scenario":null}
+[1791510523.7151086] Analyze error: 'estimatedShade'
+[1791510527.7256937] Received analyze: {"origin":{"lat":18.1511158859537,"lon":74.57635887611414},"destination":{"lat":18.160189913042927,"lon":74.58695065009042},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":697.5267936744902,"azimuthDeg":193.47617591200833},"scenario":null}
+[1791510528.3642578] Analyze error: 'estimatedShade'
+[1791510533.4476984] Received analyze: {"origin":{"lat":18.1511158859537,"lon":74.57635887611414},"destination":{"lat":18.160189913042927,"lon":74.58695065009042},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":698.8626162142131,"azimuthDeg":193.9811232174934},"scenario":null}
+[1791510534.6658072] Analyze error: 'estimatedShade'
+[1791510537.8491607] Received analyze: {"origin":{"lat":18.1511158859537,"lon":74.57635887611414},"destination":{"lat":18.160189913042927,"lon":74.58695065009042},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":699.7689664369366,"azimuthDeg":194.32381826618348},"scenario":null}
+[1791510538.2799206] Analyze error: 'estimatedShade'
+[1791510567.3991425] Received analyze: {"origin":{"lat":18.1511158859537,"lon":74.57635887611414},"destination":{"lat":18.159313982872575,"lon":74.58481584835121},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":706.3809734814091,"azimuthDeg":196.8260658163017},"scenario":null}
+[1791510578.4086416] Analyze success: True, demo=False
+[1791513396.0141] Received analyze: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.168161071844864,"lon":74.5955051512924},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":1330.7538931707304,"azimuthDeg":96.61221313139504},"scenario":null}
+[1791513410.6489792] Analyze success: True, demo=False
+[1791513459.1656828] Received analyze: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.17379292701139,"lon":74.60992930093525},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":1344.5346996330934,"azimuthDeg":102.9732343922351},"scenario":null}
+[1791513472.5444422] Analyze success: True, demo=False
+[1791513593.9728198] Received analyze: {"origin":{"lat":18.308267667699013,"lon":74.04189513947048},"destination":{"lat":18.346987618141398,"lon":74.0351798715603},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":1342.0537023871066,"azimuthDeg":105.91636488984204},"scenario":null}
+[1791513625.8644044] Analyze success: True, demo=False
+[1791514213.4752789] Received analyze: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.161029631342714,"lon":74.58771434534574},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":1508.494720185103,"azimuthDeg":181.39999164131405},"scenario":null}
+[1791514250.171371] Analyze success: True, demo=False
+[1791514472.9841847] Received analyze: {"origin":{"lat":18.15108505674243,"lon":74.57638921167629},"destination":{"lat":18.155925333011425,"lon":74.58198898450695},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":1563.2972066493687,"azimuthDeg":207.8688077369543},"scenario":null}
+[1791514500.069937] Analyze success: True, demo=False
+[1791514555.781885] Received analyze: {"origin":{"lat":18.15108505674243,"lon":74.57638921167629},"destination":{"lat":18.15923715826564,"lon":74.5856136650444},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":1581.1936094756622,"azimuthDeg":216.95929011964108},"scenario":null}
+[1791514588.0731273] Analyze success: True, demo=False
+[1791515252.8386483] Received analyze: {"origin":{"lat":18.15091228732625,"lon":74.57628491849744},"destination":{"lat":18.16029024143492,"lon":74.58700028781962},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":1731.2235787369993,"azimuthDeg":296.1694779491636},"scenario":null}
+[1791515264.2679274] Analyze success: True, demo=False
+[1791515280.806394] Received analyze: {"origin":{"lat":18.15091228732625,"lon":74.57628491849744},"destination":{"lat":18.159426291607588,"lon":74.58579541552345},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":1737.2182745312919,"azimuthDeg":299.45353090639856},"scenario":null}
+[1791515281.3695269] Analyze success: True, demo=False
+[1791515298.4026234] Received analyze: {"origin":{"lat":18.15091228732625,"lon":74.57628491849744},"destination":{"lat":18.159913784403912,"lon":74.58628843584574},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":1740.9895734904221,"azimuthDeg":301.5244987236465},"scenario":null}
+[1791515308.7168064] Analyze success: True, demo=False
+[1791515318.3647208] Received analyze: {"origin":{"lat":18.15091228732625,"lon":74.57628491849744},"destination":{"lat":18.160264437612994,"lon":74.58656945660422},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":1745.2658318604424,"azimuthDeg":303.87740861333987},"scenario":null}
+[1791515333.5105011] Analyze success: True, demo=False
+[1791515344.6631958] Received analyze: {"origin":{"lat":18.15091228732625,"lon":74.57628491849744},"destination":{"lat":18.161484939027986,"lon":74.58759302117173},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":1750.8979490564827,"azimuthDeg":306.9839241263462},"scenario":null}
+[1791515359.9458714] Analyze success: True, demo=False
+[1791515434.2935412] Received analyze: {"origin":{"lat":18.151347911975876,"lon":74.57640229723017},"destination":{"lat":18.156508594310807,"lon":74.58234384866262},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":1770.0143821538884,"azimuthDeg":317.6115680232824},"scenario":null}
+[1791515444.765526] Analyze success: True, demo=False
+[1791515465.8134007] Received analyze: {"origin":{"lat":18.151347911975876,"lon":74.57640229723017},"destination":{"lat":18.16259579920029,"lon":74.58607966521402},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":1776.8211439769718,"azimuthDeg":321.4136775220568},"scenario":null}
+[1791515475.1097517] Analyze success: True, demo=False
+[1791515500.793998] Received analyze: {"origin":{"lat":18.151347911975876,"lon":74.57640229723017},"destination":{"lat":18.160951887018996,"lon":74.58644196343619},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":1784.2995211753741,"azimuthDeg":325.60594470239266},"scenario":null}
+[1791515511.0665863] Analyze success: True, demo=False
+[1791516353.5517805] Received analyze: {"origin":{"lat":18.462561752535635,"lon":73.89640982873425},"destination":{"lat":18.47274127412581,"lon":73.89961599303143},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":1924.5547320768596,"azimuthDeg":62.29984411057558},"scenario":null}
+[1791516376.186854] Analyze success: True, demo=False
+[1791516526.3904138] Received analyze: {"origin":{"lat":18.514750117949447,"lon":73.84241542112059},"destination":{"lat":18.500498992043944,"lon":73.85399023591489},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":1957.2356762878546,"azimuthDeg":85.16344505323832},"scenario":null}
+[1791516552.9427075] Analyze success: True, demo=False
+[1791542986.6740265] Received analyze: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.151364802195786,"lon":74.57684775816429},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":1476.5146201664834,"azimuthDeg":291.96414805089626},"scenario":null}
+[1791542990.858939] Received analyze: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.151364802195786,"lon":74.57684775816429},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":1475.59650421116,"azimuthDeg":292.41114655009187},"scenario":null}
+[1791542992.2504077] Received analyze: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.151364802195786,"lon":74.57684775816429},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":1475.363393555524,"azimuthDeg":292.5246124441346},"scenario":null}
+[1791542993.1234477] Received analyze: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.151364802195786,"lon":74.57684775816429},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":1475.1050950999377,"azimuthDeg":292.65032541280925},"scenario":null}
+[1791542994.3160825] Received analyze: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.151364802195786,"lon":74.57684775816429},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":1474.9116969030304,"azimuthDeg":292.744442697609},"scenario":null}
+[1791543002.2568967] Received analyze: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.151364802195786,"lon":74.57684775816429},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":1473.1228583977986,"azimuthDeg":293.6146183712244},"scenario":null}
+[1791543006.2094073] Received analyze: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.179863111344346,"lon":74.60799948366898},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":1472.2645334669971,"azimuthDeg":294.0319158027887},"scenario":null}
+[1791543009.1305592] Received analyze: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.179863111344346,"lon":74.60799948366898},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":1471.6302087327822,"azimuthDeg":294.34021285363997},"scenario":null}
+[1791543010.3775284] Received analyze: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.179863111344346,"lon":74.60799948366898},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":1471.4265804337922,"azimuthDeg":294.43916367173006},"scenario":null}
+[1791543011.287269] Received analyze: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.179863111344346,"lon":74.60799948366898},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":1471.1625965129595,"azimuthDeg":294.5674310055092},"scenario":null}
+[1791543012.6192153] Received analyze: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.179863111344346,"lon":74.60799948366898},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":1470.9394254169435,"azimuthDeg":294.6758566718436},"scenario":null}
+[1791543026.8950286] Received analyze: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.160171643159984,"lon":74.58688839696333},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":1467.8406399464154,"azimuthDeg":296.1803244028124},"scenario":null}
+[1791543040.6890543] Received analyze: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.17926694831108,"lon":74.60781551018638},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":1464.7779250714464,"azimuthDeg":297.6653604545372},"scenario":null}
+[1791543203.5321438] Received analyze: {"origin":{"lat":18.51514196672892,"lon":73.84174557923768},"destination":{"lat":18.500961425667157,"lon":73.85409539944976},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":1464.0058477279542,"azimuthDeg":286.42172598304205},"scenario":null}
+[1791553098.622475] Received analyze: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.179544718277853,"lon":74.60831094768977},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":-758.3016783032175,"azimuthDeg":36.335333459817775},"scenario":null}
+[1791553134.3785226] Received analyze: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.179544718277853,"lon":74.60831094768977},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":-766.4119083644592,"azimuthDeg":38.9105442647633},"scenario":null}
+[1791553804.1595285] Received analyze: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.179396687871417,"lon":74.60796723883999},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":-918.0182294796535,"azimuthDeg":87.20406587953767},"scenario":null}
+[1791554903.8958936] Received analyze: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.179930060603652,"lon":74.60811896749561},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":-1164.212252760457,"azimuthDeg":166.6994982101569},"scenario":null}
+[1791556297.6015623] Received analyze: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.17945434986565,"lon":74.60801275743708},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":-1482.9489510480007,"azimuthDeg":273.1753380944374},"scenario":null}
+[1791561074.5902958] Received analyze: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.179177034435696,"lon":74.60780344469657},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":-2562.6419952347574,"azimuthDeg":348.2148346302438},"scenario":null}
+[1791564517.5487506] Received analyze: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.155894411194126,"lon":74.58093630301849},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":-3322.3179888387226,"azimuthDeg":121.05549330683061},"scenario":null}
+[1791564534.7210722] Received analyze: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.18010304600604,"lon":74.6084982891328},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":-3326.0246631319346,"azimuthDeg":124.2948232258168},"scenario":null}
+[1791564538.4073591] Received analyze: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.18010304600604,"lon":74.6084982891328},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":-3326.819625541854,"azimuthDeg":124.99111792608892},"scenario":null}
+[1791564539.2791698] Received analyze: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.18010304600604,"lon":74.6084982891328},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":-3327.008864461651,"azimuthDeg":125.15695079719444},"scenario":null}
+[1791564540.0791569] Received analyze: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.18010304600604,"lon":74.6084982891328},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":-3327.180841893784,"azimuthDeg":125.30768439555322},"scenario":null}
+[1791564873.5704155] Received analyze: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.17418862706363,"lon":74.60127048427469},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":-3398.9045581418936,"azimuthDeg":190.5385608255565},"scenario":null}
+[1791564901.0254238] Received analyze: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.154482818105322,"lon":74.56727624720452},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":-3404.7874317620262,"azimuthDeg":196.1092031065309},"scenario":null}
+[1791564903.4719949] Received analyze: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.22575222898037,"lon":74.58826041290979},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":-3405.3118095280834,"azimuthDeg":196.60745476668671},"scenario":null}
+[1791564908.8750196] Received analyze: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.151990353906243,"lon":74.56937466377568},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":-3406.4686239958464,"azimuthDeg":197.7076251000508},"scenario":null}
+[1791566201.271897] Received analyze: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.175799174224764,"lon":74.60386644832977},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":-3678.615419664022,"azimuthDeg":142.88702399143222},"scenario":null}
+[1791566217.8232584] Received analyze: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.17980032144112,"lon":74.60808862176492},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":-3682.0338403316546,"azimuthDeg":147.44041790715346},"scenario":null}
+[1791566222.557114] Received analyze: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.180261615806586,"lon":74.6086803635173},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":-3683.009716920657,"azimuthDeg":148.74432725979932},"scenario":null}
+[1791566556.8235207] Received analyze: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.17941110337088,"lon":74.60802793030348},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":-3749.2977703760566,"azimuthDeg":241.76065044194547},"scenario":null}
+[1791566594.6995342] Analyze success: True, demo=False
+[1791567651.611466] Received analyze: {"origin":{"lat":18.53141594740987,"lon":73.8441936355984},"destination":{"lat":18.505976032307814,"lon":73.87917511721392},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":-3921.267374966786,"azimuthDeg":240.33294395795747},"scenario":null}
+[1791567680.3386822] Analyze success: True, demo=False
+[1791568039.884059] Received analyze: {"origin":{"lat":28.490579691874586,"lon":77.08972076088463},"destination":{"lat":28.61837343623489,"lon":77.2313121866523},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":-3686.88970765143,"azimuthDeg":288.2005691567065},"scenario":null}
+[1791568070.4041615] Analyze success: True, demo=False
+[1791584225.619807] Received analyze: {"origin":{"lat":28.495435491816522,"lon":77.08603151570162},"destination":{"lat":28.61354214520921,"lon":77.22985037456743},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":-1925.4869396435386,"azimuthDeg":318.93763792494883},"scenario":null}
+[1791584263.03055] Analyze success: True, demo=False
+[1791585357.000733] Received analyze: {"origin":{"lat":18.151,"lon":74.582},"destination":{"lat":18.156,"lon":74.58},"travelMode":"rider","maxDetourPct":40.0,"sun":null,"scenario":null}
+[1791585407.6764627] Analyze success: True, demo=False
+[1791586344.971227] Received analyze: {"origin":{"lat":28.18279984848634,"lon":76.71402966533634},"destination":{"lat":28.63265338565786,"lon":77.21726679478655},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":-1508.2629702700822,"azimuthDeg":242.59181629601335},"scenario":null}
+[1791586369.752521] Analyze success: True, demo=False
+[1791586489.7040124] Received analyze: {"origin":{"lat":18.51107603063363,"lon":73.77874525689307},"destination":{"lat":18.53254316376629,"lon":73.854503824815},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":-1680.8031821380325,"azimuthDeg":121.68398697196335},"scenario":null}
+[1791586510.7143784] Analyze success: True, demo=False
+[1791587044.7410693] Received analyze: {"origin":{"lat":18.511,"lon":73.778},"destination":{"lat":18.532,"lon":73.854},"travelMode":"rider","maxDetourPct":40.0,"sun":null,"scenario":null}
+[1791587089.7859464] Analyze error: 'latitude'
+[1791588049.2326126] Received analyze: {"origin":{"lat":18.512259308019168,"lon":73.84137537428418},"destination":{"lat":18.525922080853633,"lon":73.88915646056216},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":-1324.631618439378,"azimuthDeg":247.67648964992622},"scenario":null}
+[1791588095.3774748] Analyze error: 'latitude'
+[1791588098.9643676] Received analyze: {"origin":{"lat":18.512259308019168,"lon":73.84137537428418},"destination":{"lat":18.525922080853633,"lon":73.88915646056216},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":-1313.381079117346,"azimuthDeg":251.52829115044096},"scenario":null}
+[1791588115.5544453] Analyze error: 'latitude'
+[1791588170.8747087] Received analyze: {"origin":{"lat":18.512745936686983,"lon":73.8437788436982},"destination":{"lat":18.515374537089315,"lon":73.86860752423334},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":-1296.970407637038,"azimuthDeg":257.1230817497726},"scenario":null}
+[1791588215.147522] Analyze error: 'latitude'
+[1791589059.042872] Received analyze: {"origin":{"lat":18.514650842366237,"lon":73.84238014613328},"destination":{"lat":18.515667244351846,"lon":73.85626219347705},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":-1096.0201174396896,"azimuthDeg":324.7800542517525},"scenario":null}
+[1791589074.407726] Analyze success: True, demo=False
+[1791590129.0457754] Received analyze: {"origin":{"lat":18.512803940536855,"lon":73.84369577977179},"destination":{"lat":18.514538219221137,"lon":73.85374019198287},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":-853.8137892101176,"azimuthDeg":44.68489778185358},"scenario":null}
+[1791590171.1944735] Analyze success: True, demo=False
+[1791592685.6575089] Received analyze: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.17612967427152,"lon":74.60457653205248},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":-232.89641796114583,"azimuthDeg":248.30418572961116},"scenario":null}
+[1791592714.272759] Analyze success: True, demo=False
+[1791594676.7347903] Received analyze: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.176136861858893,"lon":74.60448698444802},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":197.81182833551577,"azimuthDeg":35.91192407044218},"scenario":null}
+[1791594751.2542481] Analyze success: True, demo=False

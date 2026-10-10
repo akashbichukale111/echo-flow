@@ -1,0 +1,16 @@
+.env
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+node_modules/
+dist/
+*.db
+*.db-shm
+*.db-wal
+.aws-sam/
+playwright-report/
+test-results/
+.env.*
+!.env.example
+*.zip

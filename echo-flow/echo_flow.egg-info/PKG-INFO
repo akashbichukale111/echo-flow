@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: echo-flow
+Version: 0.1.0
+Summary: Synthetic emergency decision-intelligence demonstrator
+Requires-Python: >=3.11
+Requires-Dist: fastapi<1,>=0.115
+Requires-Dist: uvicorn[standard]<1,>=0.30
+Requires-Dist: pydantic<3,>=2.9
+Requires-Dist: networkx<4,>=3.3
+Requires-Dist: boto3<2,>=1.35
+Requires-Dist: mangum<1,>=0.19
+Requires-Dist: python-dotenv<2,>=1
+Requires-Dist: defusedxml<1,>=0.7
+Provides-Extra: test
+Requires-Dist: pytest<9,>=8; extra == "test"
+Requires-Dist: httpx<1,>=0.27; extra == "test"

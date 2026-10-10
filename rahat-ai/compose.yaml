@@ -1,0 +1,30 @@
+services:
+  api:
+    build: ./services/api
+    environment:
+      PROVIDER_MODE: demo
+      STORE_MODE: sqlite
+      DATABASE_PATH: /data/rahat.db
+      BEDROCK_ENABLED: "false"
+    volumes:
+      - rahat-data:/data
+    ports:
+      - "127.0.0.1:8000:8000"
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/health')"
+      interval: 10s
+      timeout: 3s
+      retries: 5
+  web:
+    build: ./apps/web
+    ports:
+      - "127.0.0.1:8080:8080"
+    depends_on:
+      api:
+        condition: service_healthy
+volumes:
+  rahat-data:

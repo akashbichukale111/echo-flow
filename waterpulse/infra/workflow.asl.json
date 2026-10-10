@@ -1,0 +1,57 @@
+{
+  "Comment": "Observer only. Human approval and execution occur through the authenticated application.",
+  "StartAt": "WATCH",
+  "TimeoutSeconds": 86400,
+  "States": {
+    "WATCH": {
+      "Type": "Task",
+      "Resource": "${WorkerArn}",
+      "Parameters": { "action_id.$": "$.action_id", "stage": "WATCH" },
+      "Next": "DIAGNOSE"
+    },
+    "DIAGNOSE": {
+      "Type": "Task",
+      "Resource": "${WorkerArn}",
+      "Parameters": { "action_id.$": "$.action_id", "stage": "DIAGNOSE" },
+      "Next": "SIMULATE"
+    },
+    "SIMULATE": {
+      "Type": "Task",
+      "Resource": "${WorkerArn}",
+      "Parameters": { "action_id.$": "$.action_id", "stage": "SIMULATE" },
+      "Next": "VALIDATE"
+    },
+    "VALIDATE": {
+      "Type": "Task",
+      "Resource": "${WorkerArn}",
+      "Parameters": { "action_id.$": "$.action_id", "stage": "VALIDATE" },
+      "Next": "APPROVE"
+    },
+    "APPROVE": {
+      "Type": "Task",
+      "Resource": "${WorkerArn}",
+      "Parameters": { "action_id.$": "$.action_id", "stage": "APPROVE" },
+      "Next": "ApprovalStatus"
+    },
+    "ApprovalStatus": {
+      "Type": "Choice",
+      "Choices": [
+        { "Variable": "$.status", "StringEquals": "REJECTED", "Next": "Rejected" },
+        { "Variable": "$.status", "StringEquals": "VERIFIED", "Next": "VERIFY" }
+      ],
+      "Default": "WaitForHumanWorkflow"
+    },
+    "WaitForHumanWorkflow": {
+      "Type": "Wait",
+      "Seconds": 60,
+      "Next": "APPROVE"
+    },
+    "VERIFY": {
+      "Type": "Task",
+      "Resource": "${WorkerArn}",
+      "Parameters": { "action_id.$": "$.action_id", "stage": "VERIFY" },
+      "End": true
+    },
+    "Rejected": { "Type": "Succeed" }
+  }
+}

@@ -1,0 +1,247 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: >-
+  WATERPULSE AI single-workspace pilot (API Gateway HTTP API, Lambda, DynamoDB,
+  private S3, Step Functions observer). Not production multi-tenant infrastructure.
+
+Parameters:
+  ApiToken:
+    Type: String
+    NoEcho: true
+    MinLength: 32
+    Description: Bearer token required by every API call in pilot mode.
+  AllowedOrigin:
+    Type: String
+    Default: http://localhost:5173
+    Description: Exact browser origin allowed by CORS (no wildcard).
+  AppMode:
+    Type: String
+    Default: pilot
+    AllowedValues: [pilot, demo]
+  BedrockModelId:
+    Type: String
+    Default: ""
+  BedrockModelArn:
+    Type: String
+    Default: ""
+    Description: Foundation-model or inference-profile ARN; empty disables Bedrock.
+  WeatherProvider:
+    Type: String
+    Default: demo
+    AllowedValues: [demo, weatherapi]
+  WeatherApiKey:
+    Type: String
+    NoEcho: true
+    Default: ""
+  AmazonLocationKey:
+    Type: String
+    NoEcho: true
+    Default: ""
+    Description: Amazon Location API key for Routes; kept server side only.
+  LogRetentionDays:
+    Type: Number
+    Default: 30
+
+Conditions:
+  BedrockEnabled: !Not [!Equals [!Ref BedrockModelArn, ""]]
+
+Globals:
+  Function:
+    Runtime: python3.12
+    Architectures: [arm64]
+    Timeout: 29
+    MemorySize: 512
+    Tracing: Active
+    Environment:
+      Variables:
+        APP_MODE: !Ref AppMode
+        API_TOKEN: !Ref ApiToken
+        ALLOWED_ORIGINS: !Ref AllowedOrigin
+        DYNAMODB_TABLE: !Ref WorkspaceTable
+        EVIDENCE_BUCKET: !Ref EvidenceBucket
+        BEDROCK_MODEL_ID: !Ref BedrockModelId
+        WEATHER_PROVIDER: !Ref WeatherProvider
+        WEATHER_API_KEY: !Ref WeatherApiKey
+        AMAZON_LOCATION_KEY: !Ref AmazonLocationKey
+        AMAZON_LOCATION_REGION: !Ref AWS::Region
+        RATE_LIMIT_PER_MINUTE: "180"
+
+Resources:
+  WorkspaceTable:
+    Type: AWS::DynamoDB::Table
+    DeletionPolicy: Retain
+    UpdateReplacePolicy: Retain
+    Properties:
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: pk
+          AttributeType: S
+      KeySchema:
+        - AttributeName: pk
+          KeyType: HASH
+      SSESpecification:
+        SSEEnabled: true
+      PointInTimeRecoverySpecification:
+        PointInTimeRecoveryEnabled: true
+
+  EvidenceBucket:
+    Type: AWS::S3::Bucket
+    DeletionPolicy: Retain
+    UpdateReplacePolicy: Retain
+    Properties:
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+      OwnershipControls:
+        Rules:
+          - ObjectOwnership: BucketOwnerEnforced
+      VersioningConfiguration:
+        Status: Enabled
+
+  EvidenceBucketTlsOnly:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref EvidenceBucket
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Sid: DenyInsecureTransport
+            Effect: Deny
+            Principal: "*"
+            Action: s3:*
+            Resource:
+              - !GetAtt EvidenceBucket.Arn
+              - !Sub "${EvidenceBucket.Arn}/*"
+            Condition:
+              Bool:
+                aws:SecureTransport: "false"
+
+  ApiLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      RetentionInDays: !Ref LogRetentionDays
+
+  WorkflowLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      RetentionInDays: !Ref LogRetentionDays
+
+  AccessLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      RetentionInDays: !Ref LogRetentionDays
+
+  StateMachineLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      RetentionInDays: !Ref LogRetentionDays
+
+  HttpApi:
+    Type: AWS::Serverless::HttpApi
+    Properties:
+      DefaultRouteSettings:
+        ThrottlingBurstLimit: 30
+        ThrottlingRateLimit: 10
+        DetailedMetricsEnabled: true
+      AccessLogSettings:
+        DestinationArn: !GetAtt AccessLogGroup.Arn
+        Format: >-
+          {"requestId":"$context.requestId","ip":"$context.identity.sourceIp",
+          "method":"$context.httpMethod","path":"$context.path",
+          "status":"$context.status","latency":"$context.responseLatency"}
+
+  ApiFunction:
+    Type: AWS::Serverless::Function
+    Metadata:
+      BuildMethod: makefile
+    Properties:
+      CodeUri: ../backend/
+      Handler: app.lambda_handler.handler
+      LoggingConfig:
+        LogGroup: !Ref ApiLogGroup
+      Policies:
+        - Statement:
+            - Effect: Allow
+              Action: [dynamodb:GetItem, dynamodb:PutItem]
+              Resource: !GetAtt WorkspaceTable.Arn
+        - !If
+          - BedrockEnabled
+          - Statement:
+              - Effect: Allow
+                Action: bedrock:InvokeModel
+                Resource: !Ref BedrockModelArn
+          - !Ref AWS::NoValue
+      Events:
+        Root:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref HttpApi
+            Path: /
+            Method: ANY
+        Proxy:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref HttpApi
+            Path: /{proxy+}
+            Method: ANY
+
+  WorkflowFunction:
+    Type: AWS::Serverless::Function
+    Metadata:
+      BuildMethod: makefile
+    Properties:
+      CodeUri: ../backend/
+      Handler: app.workflow.handler
+      Timeout: 60
+      LoggingConfig:
+        LogGroup: !Ref WorkflowLogGroup
+      Policies:
+        - Statement:
+            - Effect: Allow
+              Action: dynamodb:GetItem
+              Resource: !GetAtt WorkspaceTable.Arn
+
+  ObserverWorkflow:
+    Type: AWS::Serverless::StateMachine
+    Properties:
+      Type: STANDARD
+      DefinitionUri: workflow.asl.json
+      DefinitionSubstitutions:
+        WorkerArn: !GetAtt WorkflowFunction.Arn
+      Tracing:
+        Enabled: true
+      Logging:
+        Level: ERROR
+        IncludeExecutionData: false
+        Destinations:
+          - CloudWatchLogsLogGroup:
+              LogGroupArn: !GetAtt StateMachineLogGroup.Arn
+      Policies:
+        - LambdaInvokePolicy:
+            FunctionName: !Ref WorkflowFunction
+        - Statement:
+            - Effect: Allow
+              Action:
+                - logs:CreateLogDelivery
+                - logs:GetLogDelivery
+                - logs:UpdateLogDelivery
+                - logs:DeleteLogDelivery
+                - logs:ListLogDeliveries
+                - logs:PutResourcePolicy
+                - logs:DescribeResourcePolicies
+                - logs:DescribeLogGroups
+              Resource: "*"
+
+Outputs:
+  ApiUrl:
+    Value: !Sub "https://${HttpApi}.execute-api.${AWS::Region}.${AWS::URLSuffix}"
+  EvidenceBucketName:
+    Value: !Ref EvidenceBucket
+  ObserverWorkflowArn:
+    Value: !Ref ObserverWorkflow
