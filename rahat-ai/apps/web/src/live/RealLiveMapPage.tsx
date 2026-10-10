@@ -487,7 +487,14 @@ export default function RealLiveMapPage() {
     <button className="lv-sos" aria-label="I need RAHAT: find water, shade, rest, cooling or medical help" onClick={() => setNeedOpen(true)}>🆘 I NEED RAHAT</button>
     {needOpen && <div className="lv-need" role="dialog" aria-label="I need RAHAT">
       <div className="lv-need-h"><b>WHAT DO YOU NEED?</b><button aria-label="Close" title="Close" onClick={() => { setNeedOpen(false); setNeedKind(null); }}>×</button></div>
-      <div className="lv-kinds">{NEEDS.map(([k, l]) => <button key={k} className={needKind === k ? "on" : ""} onClick={() => setNeedKind(k)}>{KIND_ICON[k]} {l}</button>)}</div>
+      <div className="lv-kinds">{NEEDS.map(([k, l]) => <button key={k} className={needKind === k ? "on" : ""} onClick={() => {
+        setNeedKind(k);
+        if (k) {
+          api<{ audio_base64?: string }>('/emergency/speak', { text: "A nearby relief option has been found. Check its location and availability on the map.", voice_id: 'Aditi' })
+            .then(res => { if (res.audio_base64) new Audio(res.audio_base64).play(); })
+            .catch(console.error);
+        }
+      }}>{KIND_ICON[k]} {l}</button>)}</div>
       {needKind && (() => { const l = kindList(needKind).slice(0, 3);
         if (!fix) return <p className="warn">{MSG.gpsNeed}</p>;
         if (near && !near.available && !l.length) return <p className="warn">{MSG.relief} <button className="lv-link" onClick={() => { reliefAt.current = null; setWxTick(t => t + 1); }}>Retry</button></p>;
