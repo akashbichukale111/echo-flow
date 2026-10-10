@@ -442,16 +442,8 @@ export default function RealLiveMapPage() {
       <div className="lv-need-h"><b style={{color: "#ff6a4d"}}>🚨 EXTREME EMERGENCY</b><button aria-label="Close" title="Close" onClick={() => setSosOpen(false)}>×</button></div>
       {sosStatus === "idle" && <>
         <span>Are you in an emergency? Choose how to alert your emergency contact.</span>
-        {!sosContact ? (
            <div style={{ display: "grid", gap: "8px" }}>
-             <span className="warn">No emergency contact saved locally.</span>
-             <input type="tel" placeholder="+1234567890 (Include country code)" value={sosContact} onChange={e => setSosContact(e.target.value)} style={{ padding: "12px", borderRadius: "8px", border: "1px solid #444", background: "#111", color: "#fff" }} />
-             <button className="lv-btn primary" onClick={() => { if(sosContact) localStorage.setItem("rahat_emergency_contact", sosContact); }}>Save Contact</button>
-             <small className="muted">If empty, relies on backend configuration (e.g. AWS env var).</small>
-           </div>
-        ) : (
-           <div style={{ display: "grid", gap: "8px" }}>
-             <small>Saved Contact: ****{sosContact.slice(-4)} <button onClick={() => { setSosContact(""); localStorage.removeItem("rahat_emergency_contact"); }} style={{background:"none", border:0, color:"#ff6a4d", textDecoration:"underline", cursor:"pointer"}}>Change</button></small>
+             <small>Emergency Contact is securely routed via AWS.</small>
              <input type="text" placeholder="Reason (Optional)" value={sosReason} onChange={e => setSosReason(e.target.value)} style={{ padding: "12px", borderRadius: "8px", border: "1px solid #444", background: "#111", color: "#fff", marginBottom: "8px" }} />
              {[
                { id: "sms", label: "SEND EMERGENCY SMS" },
@@ -468,7 +460,7 @@ export default function RealLiveMapPage() {
                      longitude: fix!.lon,
                      reason: sosReason || undefined,
                      action: opt.id,
-                     contact_number: sosContact || undefined
+                     contact_number: undefined
                    });
                    setSosStatus(res.notification_status);
                    setSosDetails(res.details || {});
@@ -478,7 +470,6 @@ export default function RealLiveMapPage() {
                }}>{opt.label}</button>
              ))}
            </div>
-        )}
       </>}
       {sosStatus === "processing" && <span style={{ padding: "20px 0", textAlign: "center", fontWeight: "bold" }}>DISPATCHING SOS...</span>}
       {(sosStatus === "success" || sosStatus === "simulated" || sosStatus === "error" || sosStatus === "partial") && (

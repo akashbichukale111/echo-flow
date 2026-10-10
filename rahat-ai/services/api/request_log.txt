@@ -132,3 +132,15 @@
 [1791592714.272759] Analyze success: True, demo=False
 [1791594676.7347903] Received analyze: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.176136861858893,"lon":74.60448698444802},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":197.81182833551577,"azimuthDeg":35.91192407044218},"scenario":null}
 [1791594751.2542481] Analyze success: True, demo=False
+[1791631368.2524428] Received analyze: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.178272964378863,"lon":74.60322674048084},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":1031.5108616302682,"azimuthDeg":106.56968456813229},"scenario":null}
+[1791631407.0680892] Analyze success: True, demo=False
+[1791640138.1700795] Received analyze: {"origin":{"lat":28.568120297613888,"lon":77.13414063206494},"destination":{"lat":28.614301689153848,"lon":77.23165871842235},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":-1043.74893961223,"azimuthDeg":308.7855770277347},"scenario":null}
+[1791640225.931787] Analyze success: True, demo=False
+[1791640485.6416597] Received analyze: {"origin":{"lat":28.59507723511564,"lon":77.16566694223798},"destination":{"lat":28.640849072640478,"lon":77.20785528807983},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":-1118.0753388007988,"azimuthDeg":351.0821696978419},"scenario":null}
+[1791640530.2578018] Analyze success: True, demo=False
+[1791640636.6624253] Received analyze: {"origin":{"lat":28.59747837319901,"lon":77.16435270627119},"destination":{"lat":28.643033240321827,"lon":77.20288068296935},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":-1149.6292764493933,"azimuthDeg":8.997853199805832},"scenario":null}
+[1791640675.762421] Analyze success: True, demo=False
+[1791642040.0554008] Received analyze: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.176030958335048,"lon":74.60447004669851},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":-1344.9120861076726,"azimuthDeg":201.61275410048438},"scenario":null}
+[1791642079.686341] Analyze success: True, demo=False
+[1791657262.9854534] Received analyze: {"origin":{"lat":18.177465,"lon":74.612686},"destination":{"lat":18.258172284960082,"lon":74.52680000301791},"travelMode":"rider","maxDetourPct":40.0,"sun":{"altitudeDeg":-4451.2010250145095,"azimuthDeg":13.856038703830563},"scenario":null}
+[1791657295.1396432] Analyze success: True, demo=False

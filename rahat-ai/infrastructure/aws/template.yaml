@@ -54,10 +54,9 @@ Resources:
   Api:
     Type: AWS::Serverless::HttpApi
     Properties:
-      Auth:
-        DefaultAuthorizer: AWS_IAM
+      Description: RAHAT AI API
 
-Records:
+  Records:
     Type: AWS::DynamoDB::Table
     Properties:
       BillingMode: PAY_PER_REQUEST
@@ -76,7 +75,7 @@ Records:
       PointInTimeRecoverySpecification:
         PointInTimeRecoveryEnabled: true
 
-EvidenceBucket:
+  EvidenceBucket:
     Type: AWS::S3::Bucket
     Properties:
       PublicAccessBlockConfiguration:
@@ -91,7 +90,7 @@ EvidenceBucket:
       VersioningConfiguration:
         Status: Enabled
 
-ApiFunction:
+  ApiFunction:
     Type: AWS::Serverless::Function
     Properties:
       CodeUri: ../../services/api/
@@ -114,25 +113,25 @@ ApiFunction:
             Path: /{proxy+}
             Method: ANY
 
-AgentFunction:
+  AgentFunction:
     Type: AWS::Serverless::Function
     Properties:
       CodeUri: ../../services/api/
       Handler: main.agent_handler
 
-ApiLogs:
+  ApiLogs:
     Type: AWS::Logs::LogGroup
     Properties:
       LogGroupName: !Sub /aws/lambda/${ApiFunction}
       RetentionInDays: 14
 
-AgentLogs:
+  AgentLogs:
     Type: AWS::Logs::LogGroup
     Properties:
       LogGroupName: !Sub /aws/lambda/${AgentFunction}
       RetentionInDays: 14
 
-Orchestrator:
+  Orchestrator:
     Type: AWS::Serverless::StateMachine
     Properties:
       Type: STANDARD

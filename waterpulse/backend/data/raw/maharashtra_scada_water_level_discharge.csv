@@ -1,0 +1,168 @@
+timestamp,station_code,station_name,latitude,longitude,district,parameter,value,unit,source
+2026-08-12 06:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 2 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 06:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,DownStrem Discharge-2 Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 06:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 20 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 06:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 29 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 06:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,DownStream Level-3 Dam/Barrage,0,m,NWDP Maharashtra Surface Water SCADA
+2026-08-12 06:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,DownStream Level Canal,0,m,NWDP Maharashtra Surface Water SCADA
+2026-08-12 06:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Inflow Discharge,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 06:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 37 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 06:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 3 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 06:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 2 Discharge for Canal,504.65,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 06:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 32 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 06:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,DownStrem Discharge Canal,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 06:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 30 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 06:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 42 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 06:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 12 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 06:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 6 Discharge for Canal,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 06:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 6 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 06:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 33 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 06:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 7 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 06:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 21 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 06:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 41 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 06:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 24 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 06:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 15 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 06:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 14 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 06:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 23 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,DownStream Level Canal,0,m,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 14 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Inflow Discharge,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 23 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,DownStrem Discharge Canal,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 36 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 39 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 5 Discharge for Canal,566.8,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 31 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,GPRS-Rain acumm (Daily),0,mm,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 27 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,GPRS-Rainfall by Telemetry,0,mm,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 40 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 22 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 4 Discharge for Canal,575.63,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 4 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Pond Level,0,ft,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 13 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 5 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Pond Level,0,m,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 16 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 8 Discharge for Canal,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 18 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 34 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 8 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 44 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 9 Discharge for Canal,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 17 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 25 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 43 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 9 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 35 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 26 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 7 Discharge for Canal,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Cumulative Gate Discharge,0,m3/sec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,DownStream Level Dam/Barrage,0,m,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Downstream Discharge Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,DownStream Level Dam/Barrage,0,ft,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,DownStream Level Canal,489.29,m,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 10 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,DownStream Level Canal,0,ft,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 19 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 1 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Downstream Discharge Dam/Barrage,0,m3/sec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Cumulative Gate Discharge,2665.55,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Downstream Discharge Canal,0,m3/sec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 10 Discharge for Canal,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 1 Discharge for Canal,513.83,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Downstream Discharge Canal,2665.55,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 33 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 32 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 21 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 12 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 42 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 41 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 15 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 24 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 6 Discharge for Canal,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 30 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 7 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 6 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 2 Discharge for Canal,504.65,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,DownStream Level-3 Dam/Barrage,0,m,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 3 Discharge for Canal,504.65,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 2 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,DownStream Level-2 Dam/Barrage,0,m,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 37 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,DownStrem Discharge-2 Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 38 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,DownStream Level-2 Dam/Barrage,0,ft,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,DownStrem Discharge-3 Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 3 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 20 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 11 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 28 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 07:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 29 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,DownStrem Discharge Canal,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 37 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,DownStream Level-3 Dam/Barrage,0,m,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,DownStream Level-2 Dam/Barrage,0,m,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 3 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Inflow Discharge,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 29 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 2 Discharge for Canal,505,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 20 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 28 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 2 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 3 Discharge for Canal,505,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 38 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 11 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,DownStream Level Canal,0,m,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,DownStream Level-2 Dam/Barrage,0,ft,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,DownStrem Discharge-2 Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,DownStrem Discharge-3 Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 7 Discharge for Canal,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 34 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 18 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 9 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 9 Discharge for Canal,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 16 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 8 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 44 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 25 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 8 Discharge for Canal,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 17 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 43 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 35 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 26 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Pond Level,0,ft,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 39 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Pond Level,0,m,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 13 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 27 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 5 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 5 Discharge for Canal,567.15,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 36 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 4 Discharge for Canal,575.98,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,GPRS-Rainfall by Telemetry,0,mm,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 40 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 22 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 4 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 31 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,GPRS-Rain acumm (Daily),0,mm,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 23 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 14 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 21 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 6 Discharge for Canal,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 24 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 12 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 7 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 30 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 15 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 33 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 32 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 42 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 6 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 41 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 1 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 19 Discharge for Dam/Barrage,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 10 Discharge for Canal,0,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,Gate 1 Discharge for Canal,513.83,cusec,NWDP Maharashtra Surface Water SCADA
+2026-08-12 08:00:00,SC-DA-MH-UDH,Ujjani Dam Head Regulator Canal,18.07402,75.12002,Solapur,DownStream Level Canal,0,ft,NWDP Maharashtra Surface Water SCADA

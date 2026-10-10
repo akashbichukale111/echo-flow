@@ -5,3 +5,6 @@ Listening on http://localhost:8080
 =========================================
 
 Main Site:    http://localhost:8080/
+Echo-Flow:    http://localhost:8080/echo-flow/
+Rahat AI:     http://localhost:8080/rahat/
+WaterPulse:   http://localhost:8080/waterpulse/

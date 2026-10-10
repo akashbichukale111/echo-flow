@@ -16,7 +16,7 @@ $env:PATH = 'D:\nodejs\node-v20.11.1-win-x64;' + $env:PATH
 Write-Host "Starting servers in background and writing to logs..."
 
 # Start proxy directly
-Start-Process node -ArgumentList "local-proxy.js" -RedirectStandardOutput "proxy_out.log" -RedirectStandardError "proxy_err.log" -WindowStyle Hidden
+Start-Process "D:\nodejs\node-v20.11.1-win-x64\node.exe" -ArgumentList "local-proxy.js" -RedirectStandardOutput "proxy_out.log" -RedirectStandardError "proxy_err.log" -WindowStyle Hidden
 
 # Start Echo Flow
 Start-Process cmd -ArgumentList "/c `"cd echo-flow\frontend && npm install && npm run dev`"" -RedirectStandardOutput "echo_front.log" -RedirectStandardError "echo_front_err.log" -WindowStyle Hidden

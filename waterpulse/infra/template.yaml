@@ -158,8 +158,6 @@ Resources:
 
   ApiFunction:
     Type: AWS::Serverless::Function
-    Metadata:
-      BuildMethod: makefile
     Properties:
       CodeUri: ../backend/
       Handler: app.lambda_handler.handler
@@ -193,8 +191,6 @@ Resources:
 
   WorkflowFunction:
     Type: AWS::Serverless::Function
-    Metadata:
-      BuildMethod: makefile
     Properties:
       CodeUri: ../backend/
       Handler: app.workflow.handler
