@@ -1,4 +1,4 @@
-import os
+﻿import os
 import logging
 from datetime import datetime, timezone
 from uuid import uuid4
@@ -85,6 +85,20 @@ def trigger_sos(request: SOSRequest, store=Depends(get_store), sms=Depends(get_s
         if request.action in ("voice", "both"):
             voice_result = {"status": "simulated", "message_id": "simulated_voice"}
         
+        # 4.5. Broadcast to AWS SNS (ECHO-FLOW-DISASTER-ALERTS)
+    try:
+        import boto3
+        sns = boto3.client('sns', region_name=os.getenv("AWS_REGION", "ap-south-1"))
+        topic = sns.create_topic(Name='ECHO-FLOW-DISASTER-ALERTS')
+        sns.publish(
+            TopicArn=topic['TopicArn'],
+            Message=f"URGENT: New SOS Triggered in RAHAT AI!\nLocation: {maps_link}\nReason: {request.reason}\nAction Taken: {request.action}",
+            Subject="ECHO-FLOW SYSTEM ALERT"
+        )
+        logger.info(f"Successfully broadcasted SOS to SNS Topic: ECHO-FLOW-DISASTER-ALERTS")
+    except Exception as e:
+        logger.warning(f"SNS Broadcast skipped/failed (Ensure IAM permissions for sns:CreateTopic and sns:Publish): {e}")
+
     # 5. Persist Incident
     incident_data = {
         "timestamp": datetime.now(timezone.utc).isoformat(),
@@ -117,3 +131,23 @@ def trigger_sos(request: SOSRequest, store=Depends(get_store), sms=Depends(get_s
             "voice": voice_result["status"]
         }
     }
+
+
+class TranslateRequest(BaseModel):
+    text: str
+    target_language: str = "hi"
+
+@router.post("/translate")
+def translate_instruction(request: TranslateRequest):
+    try:
+        import boto3
+        translate = boto3.client('translate', region_name=os.getenv("AWS_REGION", "ap-south-1"))
+        response = translate.translate_text(
+            Text=request.text,
+            SourceLanguageCode="en",
+            TargetLanguageCode=request.target_language
+        )
+        return {"translated_text": response.get('TranslatedText', request.text)}
+    except Exception as e:
+        logger.error(f"Translation failed: {e}")
+        return {"translated_text": request.text, "error": str(e)}

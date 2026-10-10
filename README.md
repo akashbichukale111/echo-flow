@@ -85,7 +85,9 @@ To demonstrate enterprise-grade scalability, resilience, and security, the ECHO-
 1.  🧠 **Amazon Bedrock (Claude 3.5):** Integrated for complex adversarial reasoning and Generative AI multi-agent orchestration (Counterfactual, Relief, Coordinator).
 2.  🗺️ **Amazon Location Service:** Core GIS engine used extensively across `echo-flow` and `rahat-ai`. Provides live map vector tiles, reverse geocoding (Places API), and exact route calculations.
 3.  📲 **Amazon Pinpoint (SMS & Voice v2):** The backbone of the **RAHAT AI One-Tap SOS**. Programmatically triggers transactional SMS and Automated Voice Calls to verified emergency contacts within seconds of the SOS trigger.
-4.  🔐 **AWS IAM (Identity and Access Management):** Enforces strict least-privilege security. Utilizes granular, scoped policies for securely invoking Bedrock models, fetching Location maps, and triggering Pinpoint messages.
+4.  🌐 **Amazon SNS (Simple Notification Service):** Connected to the SOS workflow. Automatically creates a `ECHO-FLOW-DISASTER-ALERTS` topic and broadcasts urgent incident reports to emergency control rooms globally.
+5.  🗣️ **Amazon Translate:** Integrated directly into the RAHAT AI API layer (`/api/emergency/translate`) to dynamically translate crucial survival instructions and warnings into regional languages (e.g., Hindi) during extreme heatwaves.
+6.  🔐 **AWS IAM (Identity and Access Management):** Enforces strict least-privilege security. Utilizes granular, scoped policies for securely invoking Bedrock models, fetching Location maps, and triggering Pinpoint messages.
 
 ### 🏗️ Architected for Production Scaling (Cloud Blueprint)
 *The following services are part of our designed production deployment blueprint to handle millions of requests during an actual disaster. They are not active in the local prototype to maintain a fast, offline-capable development environment.*
