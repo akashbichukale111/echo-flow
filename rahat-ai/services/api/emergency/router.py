@@ -99,6 +99,19 @@ def trigger_sos(request: SOSRequest, store=Depends(get_store), sms=Depends(get_s
     except Exception as e:
         logger.warning(f"SNS Broadcast skipped/failed (Ensure IAM permissions for sns:CreateTopic and sns:Publish): {e}")
 
+            # 4.6. Analyze Severity with Amazon Comprehend
+    severity_level = "Unknown"
+    try:
+        if request.reason:
+            import boto3
+            comprehend = boto3.client('comprehend', region_name=os.getenv("AWS_REGION", "ap-south-1"))
+            comp_resp = comprehend.detect_sentiment(Text=request.reason, LanguageCode='en')
+            sentiment = comp_resp.get('Sentiment', 'UNKNOWN')
+            severity_level = "HIGH" if sentiment in ["NEGATIVE", "MIXED"] else "NORMAL"
+            logger.info(f"Comprehend analyzed SOS reason: {sentiment} -> Severity: {severity_level}")
+    except Exception as e:
+        logger.warning(f"Comprehend Sentiment Analysis skipped/failed: {e}")
+
     # 5. Persist Incident
     incident_data = {
         "timestamp": datetime.now(timezone.utc).isoformat(),
@@ -151,3 +164,27 @@ def translate_instruction(request: TranslateRequest):
     except Exception as e:
         logger.error(f"Translation failed: {e}")
         return {"translated_text": request.text, "error": str(e)}
+
+class PollyRequest(BaseModel):
+    text: str
+    voice_id: str = "Aditi"
+
+@router.post("/speak")
+def generate_speech(request: PollyRequest):
+    try:
+        import boto3
+        import base64
+        polly = boto3.client('polly', region_name=os.getenv("AWS_REGION", "ap-south-1"))
+        response = polly.synthesize_speech(
+            Text=request.text,
+            OutputFormat="mp3",
+            VoiceId=request.voice_id
+        )
+        if "AudioStream" in response:
+            audio_base64 = base64.b64encode(response["AudioStream"].read()).decode("utf-8")
+            return {"audio_base64": f"data:audio/mp3;base64,{audio_base64}"}
+        return {"error": "No AudioStream returned"}
+    except Exception as e:
+        logger.error(f"Polly Synthesis failed: {e}")
+        return {"error": str(e)}
+

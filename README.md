@@ -87,7 +87,9 @@ To demonstrate enterprise-grade scalability, resilience, and security, the ECHO-
 3.  📲 **Amazon Pinpoint (SMS & Voice v2):** The backbone of the **RAHAT AI One-Tap SOS**. Programmatically triggers transactional SMS and Automated Voice Calls to verified emergency contacts within seconds of the SOS trigger.
 4.  🌐 **Amazon SNS (Simple Notification Service):** Connected to the SOS workflow. Automatically creates a `ECHO-FLOW-DISASTER-ALERTS` topic and broadcasts urgent incident reports to emergency control rooms globally.
 5.  🗣️ **Amazon Translate:** Integrated directly into the RAHAT AI API layer (`/api/emergency/translate`) to dynamically translate crucial survival instructions and warnings into regional languages (e.g., Hindi) during extreme heatwaves.
-6.  🔐 **AWS IAM (Identity and Access Management):** Enforces strict least-privilege security. Utilizes granular, scoped policies for securely invoking Bedrock models, fetching Location maps, and triggering Pinpoint messages.
+6.  🎙️ **Amazon Polly:** Powers accessibility in RAHAT AI (`/api/emergency/speak`). When a rider clicks "I NEED RAHAT", Polly dynamically synthesizes voice guidance (e.g., *"A nearby relief option has been found"*), allowing riders to keep their eyes on the road.
+7.  🔍 **Amazon Comprehend:** Analyzes the sentiment and severity of incoming SOS distress messages in real-time. Automatically tags incidents as 'HIGH SEVERITY' if negative sentiment or panic keywords are detected.
+8.  🔐 **AWS IAM (Identity and Access Management):** Enforces strict least-privilege security. Utilizes granular, scoped policies for securely invoking Bedrock models, fetching Location maps, and triggering Pinpoint messages.
 
 ### 🏗️ Architected for Production Scaling (Cloud Blueprint)
 *The following services are part of our designed production deployment blueprint to handle millions of requests during an actual disaster. They are not active in the local prototype to maintain a fast, offline-capable development environment.*
