@@ -89,20 +89,25 @@ The Waterpulse module heavily relies on authentic telemetry data from the Govern
 
 ## ☁️ AWS Cloud Architecture (12+ Services)
 
-To demonstrate enterprise-grade scalability, resilience, and security during national emergencies, the ECHO-FLOW platform incorporates a deep, cloud-native AWS Architecture utilizing the following services:
+To demonstrate enterprise-grade scalability, resilience, and security during national emergencies, the ECHO-FLOW platform incorporates a deep AWS Cloud Architecture. For transparency, we have divided this into services that are **currently live in the prototype** versus those **architected for production scaling**.
 
-1.  🧠 **Amazon Bedrock (Claude 3.5):** Powers the Generative AI multi-agent teams. Used for complex adversarial reasoning, explaining evacuation routes without hallucinating, and formulating coordinated disaster plans.
-2.  🗺️ **Amazon Location Service:** Core GIS engine used extensively across `echo-flow` and `rahat-ai`. Provides map vector tiles, reverse geocoding (Places API), and exact route calculations for safe evacuations.
+### 🟢 Currently Implemented & Live in Local Prototype
+1.  🧠 **Amazon Bedrock (Claude 3.5):** Integrated for complex adversarial reasoning and Generative AI multi-agent orchestration (Counterfactual, Relief, Coordinator).
+2.  🗺️ **Amazon Location Service:** Core GIS engine used extensively across `echo-flow` and `rahat-ai`. Provides live map vector tiles, reverse geocoding (Places API), and exact route calculations for safe evacuations.
 3.  📲 **Amazon Pinpoint (SMS & Voice v2):** The backbone of the **RAHAT AI One-Tap SOS**. Programmatically triggers transactional SMS and Automated Voice Calls to verified emergency contacts within seconds of the SOS trigger.
-4.  🔄 **AWS Step Functions:** Orchestrates the multi-agent AI pipeline in the Echo-Flow Command Center. Manages the sequence of Counterfactual, Relief, and Coordinator agents to ensure reliable decision chains.
-5.  ⚡ **AWS Lambda:** Serverless compute utilized for lightweight, event-driven background tasks (e.g., parsing incoming NDMA CAP feeds, scheduling automated SOS fallbacks, and real-time weather data processing).
-6.  🌐 **Amazon API Gateway:** Secures and manages the backend REST APIs. Crucial for implementing rate limiting and throttling to ensure the system doesn't crash during traffic spikes in a disaster.
-7.  🚀 **Amazon CloudFront:** A global CDN used to cache and deliver the React/Vite frontends (PWA) and map tiles with ultra-low latency, ensuring citizens can access RAHAT AI even on poor mobile networks.
-8.  🗄️ **Amazon DynamoDB:** A highly scalable NoSQL database used to log high-speed, unstructured disaster data such as live citizen trip records, SOS triggers, and agent simulation outputs.
-9.  🪣 **Amazon S3:** Object storage used for hosting static website assets, storing historical disaster evidence (images/PDFs), and archiving satellite (Sentinel/Landsat) data sets.
-10. 📡 **AWS IoT Core:** The designated ingestion layer for WATERPULSE telemetry. Securely handles high-frequency MQTT streams from remote river gauges and dam SCADA systems.
-11. 📈 **Amazon CloudWatch:** Centralized telemetry and monitoring. Used for logging API requests and setting up critical alarms (e.g., alerting developers immediately if Pinpoint SOS delivery failure rates spike).
-12. 🔐 **AWS IAM (Identity and Access Management):** Enforces strict least-privilege security. Utilizes granular, scoped policies for securely invoking Bedrock models, fetching Location maps, and triggering Pinpoint messages.
+4.  🔐 **AWS IAM (Identity and Access Management):** Enforces strict least-privilege security. Utilizes granular, scoped policies for securely invoking Bedrock models, fetching Location maps, and triggering Pinpoint messages.
+
+### 🏗️ Architected for Production Scaling (Cloud Blueprint)
+*The following services are part of our designed production deployment blueprint to handle millions of requests during an actual disaster. They are not active in the local prototype to maintain a fast, offline-capable development environment.*
+
+5.  🔄 **AWS Step Functions:** Orchestrates the multi-agent AI pipeline in the cloud to manage the sequence of AI agents and ensure reliable decision chains.
+6.  ⚡ **AWS Lambda:** Serverless compute for lightweight, event-driven background tasks (e.g., parsing incoming NDMA CAP feeds, scheduling automated SOS fallbacks).
+7.  🌐 **Amazon API Gateway:** Secures backend REST APIs and implements rate limiting / throttling to ensure the system doesn't crash during traffic spikes.
+8.  🚀 **Amazon CloudFront:** A global CDN to cache and deliver the React/Vite frontends (PWA) and map tiles with ultra-low latency on poor mobile networks.
+9.  🗄️ **Amazon DynamoDB:** A highly scalable NoSQL database for logging high-speed, unstructured disaster data (e.g., citizen trip records, SOS triggers). *(Currently using local SQLite)*.
+10. 🪣 **Amazon S3:** Object storage for hosting static website assets and archiving historical disaster evidence (images/PDFs) and satellite data sets. *(Currently using local file storage)*.
+11. 📡 **AWS IoT Core:** The designated ingestion layer for WATERPULSE telemetry. Securely handles high-frequency MQTT streams from remote river gauges and dam SCADA systems.
+12. 📈 **Amazon CloudWatch:** Centralized telemetry and monitoring for logging API requests and setting up critical alarms (e.g., if Pinpoint SOS delivery failure rates spike).
 
 ---
 
