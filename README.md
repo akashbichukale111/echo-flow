@@ -2,6 +2,10 @@
 
 **One Platform. Three Modules. Infinite Resilience.**
 
+<p align="center">
+  <img src="assets/architecture.jpg" alt="ECHO-FLOW System Architecture" width="100%" />
+</p>
+
 Welcome to **ECHO-FLOW**, an advanced Environmental Decision Intelligence Operating System. More than just a dashboard that plots data on a map, ECHO-FLOW is designed to **understand scenarios, simulate interventions, compare consequences, and enforce human approval** before taking action. 
 
 It is built as a unified product divided into three independent but deeply interconnected modules, powered by an underlying AWS Cloud Architecture and Generative AI.
