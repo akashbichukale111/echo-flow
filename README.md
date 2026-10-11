@@ -77,6 +77,20 @@ The Waterpulse module heavily relies on authentic telemetry data from the Govern
 
 ---
 
+## 🏆 AWS Hackathon Eligibility & Alignment
+
+To satisfy the hackathon criteria (**"Use at least one AWS open source tool OR be deployed on AWS"**), the ECHO-FLOW platform fulfills both tracks:
+
+### 1. 🛠️ BUILD IT: AWS Open Source Tools (On Machine)
+*   **AWS SAM CLI (Serverless Application Model):** Used as our open-source Infrastructure-as-Code (IaC) tool across all three modules (`echo-flow/infra/template.yaml`, `rahat-ai/infrastructure/aws/template.yaml`, and `waterpulse/infra/template.yaml`). The repository contains full `.aws-sam` build templates for serverless microservices.
+
+### 2. 🚀 SHIP IT: AWS Cloud Services Deployed
+*   **Production Hosting & Storage:** Deployed on **Amazon S3** static website hosting with S3 cloud storage for public asset distribution.
+*   **Event-Driven Messaging & Plumbing:** **Amazon SNS** (`ECHO-FLOW-DISASTER-ALERTS`) and **Amazon Pinpoint (SMS/Voice)** for emergency dispatch.
+*   **GenAI & Intelligent Services:** **Amazon Bedrock (Claude 3.5)**, **Amazon Polly (Text-to-Speech)**, **Amazon Translate**, **Amazon Comprehend (Severity Analysis)**, and **Amazon Location Service (GIS & Routes)**.
+
+---
+
 ## ☁️ AWS Cloud Architecture (12+ Services)
 
 To demonstrate enterprise-grade scalability, resilience, and security, the ECHO-FLOW platform incorporates a deep AWS Cloud Architecture. For transparency, we have divided this into services that are **currently live in the prototype** versus those **architected for production scaling**.
